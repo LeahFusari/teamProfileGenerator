@@ -33,18 +33,13 @@ const managerPrompts = () => {
         message: 'Team Manager office phone number?'
     }
     ])
-    
+    .then(managerData => {
+        const  { name, empID, email, officePhone } = managerData; 
+        const manager = new Manager (name, empID, email, officePhone);
+
+        teamArr.push(manager);
+
+    })
 };
 
-// const promptEmployee = employeeData => {
-//     if (!employeeData.employees) {
-//       employeeData.employees = [];
-//     }
-//     console.log(`
-//     =================
-//     Add an Employee
-//     =================
-//     `);
-    // return inquirer.prompt([
-// }
 managerPrompts();
