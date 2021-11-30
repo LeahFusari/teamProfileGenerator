@@ -142,7 +142,7 @@ const employeePrompts = () => {
         }
 
         teamArr.push(employee); 
-        // console.log(teamArr);
+        console.log(teamArr);
 
         if (confirmAddEmp) {
             return employeePrompts(teamArr); 
