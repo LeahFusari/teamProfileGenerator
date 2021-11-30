@@ -15,22 +15,55 @@ const managerPrompts = () => {
     {
         type: 'input',
         name: 'name',
-        message: 'Team Manager Name?'
+        message: 'Team Manager Name?',
+        validate: mgrName => {
+            if (mgrName) {
+                return true;
+            } else {
+                console.log ('Please enter manager name!');
+                return false; 
+            }
+        }
+        
     },
     {
         type: 'input',
         name: 'empID',
-        message: 'Team Manager Employee ID number?'
+        message: 'Team Manager Employee ID number?',
+        validate: empID => {
+            if  (isNaN(empID)) {
+                console.log ('Please enter employee ID!')
+                return false; 
+            } else {
+                return true;
+            }
+        }
     },
     {
         type: 'input',
         name: 'email',
-        message: 'Team Manager email address?'
+        message: 'Team Manager email address?',
+        validate: email => {
+            if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+                return true;
+            } else {
+                console.log ('Please enter a valid email!')
+                return false; 
+            }
+        }
     },
     {
         type: 'input',
         name: 'officePhone',
-        message: 'Team Manager office phone number?'
+        message: 'Team Manager office phone number?',
+        validate: officePhone => {
+            if (/^\d{10}$/.test(officePhone)) {
+                return true;
+            } else {
+                console.log ('Please enter a valid phone number format.')
+                return false; 
+            }
+        }
     }
     ])
     .then(managerData => {
@@ -68,8 +101,7 @@ const employeePrompts = () => {
                     return false; 
                 }
             }
-        }
-        ,
+        },
         {
             type: 'input',
             name: 'empID',
