@@ -1,3 +1,5 @@
+const createHTML = require('./src/createHTML');
+
 // Team Profile Constructors
 
 const Manager = require('./lib/Manager');
@@ -174,7 +176,6 @@ const employeePrompts = () => {
         }
 
         teamArr.push(employee); 
-        console.log(teamArr);
 
         if (confirmAddEmp) {
             return employeePrompts(teamArr); 
@@ -186,7 +187,22 @@ const employeePrompts = () => {
     
 };
 
+
 managerPrompts()
 .then(employeePrompts)
+.then(teamArr =>{
+   return createHTML(teamArr)
+})
+.then (template =>{
+    // console.log(template);
+    fs.writeFile('./dist/index.html', template, err =>{
+        if (err){
+            console.log(err);
+        }
+        else{
+            console.log("HTML Generated Successfully!")
+        }
+    });
+})
 
 
