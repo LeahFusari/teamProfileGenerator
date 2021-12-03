@@ -1,0 +1,31 @@
+.header{
+    text-align: center;
+    padding: 10px 0;
+    background-color: cadetblue;
+}
+
+.card{
+    margin: 10px 0;
+    width: 160px !important;
+    
+}
+
+.card-body{
+    text-align: center;
+    padding: 0;
+}
+
+.card p{
+    margin: 0;
+    font-size: 15px;
+    padding-bottom: 5px;
+}
+
+.card-title{
+    background-color: cadetblue;
+    
+}
+
+.card span{
+    font-weight: bold;
+}

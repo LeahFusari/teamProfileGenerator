@@ -60,18 +60,6 @@ const createHTML = data =>{
 
             cardArr.push(intCard);
         }
-    
-        
-        // if(data[i].getTitle() === "Manager"){
-            // teamCards.push(`<h1>Manager: ${data[i].getName()}</h1>`)
-            // teamCards.push(`<h1>Role: ${data[i].getTitle()}</h1>`)
-            // teamCards.push(`<h1>Employee ID: ${data[i].getEmpID()}</h1>`)
-            // teamCards.push(`<h1>Email: ${data[i].getEmail()}</h1>`)
-            // teamCards.push(`<h1>Office Phone: ${data[i].getOfficePhone()}</h1>`)
-        // }
-        // if(data[i].getTitle() === "Engineer"){
-            // teamCards.push(`<h1>Engineer: ${data[i].getName()}</h1>`)
-        // }
     }
 
     const teamCards = cardArr.join('')
@@ -84,6 +72,10 @@ const createPage = teamCards => {
     <!DOCTYPE html>
         <html lang="en">
         <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+        crossorigin="anonymous">
+        <link rel="stylesheet" href = "./style.css"/>
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
