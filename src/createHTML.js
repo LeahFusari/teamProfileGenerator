@@ -22,7 +22,7 @@ const generateEngineer = engineer => {
                     <h5>${engineer.name}</h5>
                     <p><span>ID:</span> ${engineer.empID}</p>
                     <p> <span>Email:</span> <br> <a href="mailto:${engineer.email}"> ${engineer.email}</a></p>
-                    <p> <span>Github:</span> <br> <a href="https://github.com/${engineer.github}">${engineer.github}</a></p>
+                    <p> <span>Github:</span> <br> <a href="https://github.com/${engineer.github}" target="_blank">${engineer.github}</a></p>
                 </div>
             </div>
 
