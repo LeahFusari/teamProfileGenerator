@@ -1,13 +1,25 @@
+.container-md{
+    width: 750px;
+}
+
 .header{
     text-align: center;
     padding: 10px 0;
-    background-color: cadetblue;
+    
+}
+ 
+.card{
+    margin: 10px 0!important;
+    width: 160px !important;
+    text-shadow: 2px 2px 8px cadetblue;
+    border-width: 2px;
+    border-color: darkcyan;
 }
 
-.card{
-    margin: 10px 0;
-    width: 160px !important;
-    
+.card-title, .header{
+    color: white;
+    background-color: cadetblue;
+    text-shadow: 2px 2px 8px black;
 }
 
 .card-body{
@@ -19,11 +31,6 @@
     margin: 0;
     font-size: 15px;
     padding-bottom: 5px;
-}
-
-.card-title{
-    background-color: cadetblue;
-    
 }
 
 .card span{

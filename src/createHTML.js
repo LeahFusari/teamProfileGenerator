@@ -1,35 +1,41 @@
 const generateManager = manager => {
     return `
-    <div>
-        <h2>Manager</h2>
-        <h3>${manager.name}</h3>
-        <p> ID: ${manager.empID}</p>
-        <p> Email:${manager.email}</p>
-        <p> Office Number: ${manager.officePhone}</p>
+    <div class="card shadow mb-5 bg-body rounded" style="width: 18rem;">
+        <div class="card-body">
+            <h4 class="card-title rounded-top">Manager  <i class="fas fa-user-tie fa-1x"></i></h4>
+            <h5>${manager.name}</h5>
+            <p><span>ID:</span> ${manager.empID}</p>
+            <p> <span>Email:</span> <br> <a mailto:${manager.email}></a>${manager.email}</p>
+            <p type="tel"> <span>Office Number:</span> <br> ${manager.officePhone}</p>
+        </div>
     </div>
     `;
 }
 
 const generateEngineer = engineer => {
     return `
-    <div>
-        <h2>Engineer</h2>
-        <h3>${engineer.name}</h3>
-        <p> ID: ${engineer.empID}</p>
-        <p> Email: ${engineer.email}</p>
-        <p> Github: <a href="https://github.com/${engineer.github}">${engineer.github}</a></p>
+    <div class="card shadow mb-5 bg-body rounded" style="width: 18rem;">
+        <div class="card-body">
+            <h4 class="card-title rounded-top">Engineer  <i class="fas fa-cogs fa-1x"></i></h4>
+            <h5>${engineer.name}</h5>
+            <p><span>ID:</span> ${engineer.empID}</p>
+            <p> <span>Email:</span> <br> <a mailto:${engineer.email}></a>${engineer.email}</p>
+            <p> <span>Github:</span> <br> <a href="https://github.com/${engineer.github}">${engineer.github}</a></p>
+        </div>
     </div>
     `;
 }
 
 const generateIntern = intern => {
     return `
-    <div>
-        <h2>Intern</h2>
-        <h3>${intern.name}</h3>
-        <p> ID: ${intern.empID}</p>
-        <p> Email:${intern.email}</p>
-        <p> School: ${intern.school}</p>
+    <div class="card shadow mb-5 bg-body rounded" style="width: 18rem;">
+        <div class="card-body">
+            <h4 class="card-title rounded-top">Intern  <i class="fas fa-graduation-cap fa-1x"></i></h4>
+            <h5>${intern.name}</h5>
+            <p><span>ID:</span> ${intern.empID}</p>
+            <p> <span>Email:</span> <br> <a mailto:${intern.email}></a>${intern.email}</p>
+            <p> <span>School:</span> <br> ${intern.school}</p>
+        </div>
     </div>
     `;
 }
@@ -75,14 +81,22 @@ const createPage = teamCards => {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
         crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" 
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href = "./style.css"/>
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Document</title>
+            <title>Dev Team List</title>
         </head>
         <body>
+        <div class="header">
+            <h1>Dev Team</h1>
+        </div>
+            <div class="container-md d-flex flex-wrap justify-content-evenly">
             ${teamCards}
+            </div>
         </body>
         </html>
     `
