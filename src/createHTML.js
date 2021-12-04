@@ -47,7 +47,7 @@ const createHTML = data =>{
 
     for (let i = 0; i < data.length; i++){
         const employee = data[i];
-        const role = employee.getTitle(); 
+        const role = employee.getRole(); 
 
         // call manager function
         if (role === 'Manager') {
