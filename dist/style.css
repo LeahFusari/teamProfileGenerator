@@ -1,11 +1,17 @@
-.container-md{
-    width: 750px;
+
+
+#header{
+    display:flex;
+    padding: 10px 0;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
 }
 
-.header{
-    text-align: center;
-    padding: 10px 0;
-    
+#header h1{
+    display: flex;
+    justify-content: center;
 }
  
 .card{
@@ -16,7 +22,7 @@
     border-color: darkcyan;
 }
 
-.card-title, .header{
+.card-title, #header{
     color: white;
     background-color: cadetblue;
     text-shadow: 2px 2px 8px black;

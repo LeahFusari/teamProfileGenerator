@@ -1,42 +1,46 @@
 const generateManager = manager => {
     return `
+
     <div class="card shadow mb-5 bg-body rounded" style="width: 18rem;">
-        <div class="card-body">
-            <h4 class="card-title rounded-top">Manager  <i class="fas fa-user-tie fa-1x"></i></h4>
-            <h5>${manager.name}</h5>
-            <p><span>ID:</span> ${manager.empID}</p>
-            <p> <span>Email:</span> <br> <a mailto:${manager.email}></a>${manager.email}</p>
-            <p type="tel"> <span>Office Number:</span> <br> ${manager.officePhone}</p>
-        </div>
-    </div>
+                <div class="card-body">
+                    <h4 class="card-title rounded-top">Manager  <i class="fas fa-user-tie fa-1x"></i></h4>
+                    <h5>${manager.name}</h5>
+                    <p><span>ID:</span> ${manager.empID}</p>
+                    <p> <span>Email:</span> <br> <a href="mailto:${manager.email}"> ${manager.email}</a></p>
+                    <p type="tel"> <span>Office Number:</span> <br> ${manager.officePhone}</p>
+                </div>
+            </div>
     `;
 }
 
 const generateEngineer = engineer => {
     return `
+
     <div class="card shadow mb-5 bg-body rounded" style="width: 18rem;">
-        <div class="card-body">
-            <h4 class="card-title rounded-top">Engineer  <i class="fas fa-cogs fa-1x"></i></h4>
-            <h5>${engineer.name}</h5>
-            <p><span>ID:</span> ${engineer.empID}</p>
-            <p> <span>Email:</span> <br> <a mailto:${engineer.email}></a>${engineer.email}</p>
-            <p> <span>Github:</span> <br> <a href="https://github.com/${engineer.github}">${engineer.github}</a></p>
-        </div>
-    </div>
+                <div class="card-body">
+                    <h4 class="card-title rounded-top">Engineer  <i class="fas fa-cogs fa-1x"></i></h4>
+                    <h5>${engineer.name}</h5>
+                    <p><span>ID:</span> ${engineer.empID}</p>
+                    <p> <span>Email:</span> <br> <a href="mailto:${engineer.email}"> ${engineer.email}</a></p>
+                    <p> <span>Github:</span> <br> <a href="https://github.com/${engineer.github}">${engineer.github}</a></p>
+                </div>
+            </div>
+
     `;
 }
 
 const generateIntern = intern => {
     return `
+
     <div class="card shadow mb-5 bg-body rounded" style="width: 18rem;">
-        <div class="card-body">
-            <h4 class="card-title rounded-top">Intern  <i class="fas fa-graduation-cap fa-1x"></i></h4>
-            <h5>${intern.name}</h5>
-            <p><span>ID:</span> ${intern.empID}</p>
-            <p> <span>Email:</span> <br> <a mailto:${intern.email}></a>${intern.email}</p>
-            <p> <span>School:</span> <br> ${intern.school}</p>
-        </div>
-    </div>
+                <div class="card-body">
+                    <h4 class="card-title rounded-top">Intern  <i class="fas fa-graduation-cap fa-1x"></i></h4>
+                    <h5>${intern.name}</h5>
+                    <p><span>ID:</span> ${intern.empID}</p>
+                    <p> <span>Email:</span> <br> <a href="mailto:${intern.email}"> ${intern.email}</a></p>
+                    <p> <span>School:</span> <br> ${intern.school}</p>
+                </div>
+            </div>
     `;
 }
 
@@ -91,11 +95,12 @@ const createPage = teamCards => {
             <title>Dev Team List</title>
         </head>
         <body>
-        <div class="header">
-            <h1>Dev Team</h1>
-        </div>
-            <div class="container-md d-flex flex-wrap justify-content-evenly">
-            ${teamCards}
+        <body>
+            <div id="header" class="row container-fluid">
+                <h1>Dev Team</h1>
+            </div>
+            <div id="card-holder" class="container d-flex flex-wrap justify-content-evenly">
+                ${teamCards}
             </div>
         </body>
         </html>
